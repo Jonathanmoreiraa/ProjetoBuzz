@@ -1,0 +1,184 @@
+/**CSS para o SITE, a home.*/
+body{
+    background-color: #f9faff !important;
+}
+nav ul li.menu a{
+    color: white !important;
+}
+nav ul li.menu a:hover{
+    color: #d5d5da !important;
+}
+header{
+    margin-bottom: 56px !important;
+}
+.btn-acess{
+    background-color: rgb(67, 74, 114);
+    color: white;
+}
+.btn-acess:hover{
+    color: white;
+}
+.servicos{
+    background-color: #f9faff;
+    border-radius: 0rem;
+    margin-bottom: 0rem;
+}
+.titulo-servicos{
+    color: rgb(49, 54, 85);
+    margin-bottom: 46px !important;
+}
+.tamanho-icon{
+    font-size: 68px;
+    color: rgb(124, 155, 197);
+}
+.depoimento{
+    background-color: #172344;
+    border-radius: 0rem;
+    margin-bottom: 0rem;
+}
+.titulo-depoimento{
+    color: white;
+    margin-bottom: 46px !important;
+}
+.desc-depoimento{
+    margin-bottom: 40px;
+    color: white;
+}
+.rodape{
+    border-radius: 0rem;
+    margin-bottom: 0rem;
+    color: rgb(66, 73, 114);
+    font-family: 'Calibri';
+    
+}
+.rodape ul li a.link-rodape{
+    /*Personalizar o link exclusivo do rodapé*/
+    color: rgb(66, 73, 114) !important;
+}
+.rodape ul li a.link-rodape:hover{
+    color: rgb(34, 37, 58) !important;
+    text-decoration: none;
+}
+@media (min-width:1570px){
+    .slides{
+        width: 75% !important;
+        height: 810px;
+        margin-left: 12% !important;
+    }
+    .card img{
+        width: 100%;
+        height: 220px !important;
+    }
+    .rodImg{
+        margin-left: 80px;
+    }
+    .rodlogo{
+        margin-left: 15% !important;
+    }
+    #myCarousel{
+        background-color: rgba(0, 0, 0, 0.24);
+        
+    }
+    
+}
+@media (max-width:1569px){/* Para telas de no mínimo 768px*/
+    .rodape{
+        font-size: 100% !important;
+    }
+    .rodImg{
+        width: 80px !important;
+        margin-left: 65px !important;
+    }
+    .rodlogo{
+        margin-left: 15% !important;
+    }
+    
+}
+@media (max-width:767px){ /* Para telas de no mínimo 540px*/
+    .rodape{
+        font-size: 80% !important;
+    }
+    .rodImg{
+        width: 58px !important;
+        margin-left: 25px !important;
+
+    }
+    .rodlogo{
+        margin-left: 55px !important;
+    }
+}
+@media (max-width:581px){ /* Para telas de no mínimo 540px*/
+    .rodape{
+        font-size: 80% !important;
+    }
+    .rodlogo{
+        margin-left: 4px !important;
+    }
+    .rodImg{
+        display: none;
+    }
+}
+.sobre-empresa{
+    background-color: #f9faff;
+    border-radius: 0rem;
+    margin-bottom: 0rem;
+}
+.sob-emp-titulo{
+    margin-bottom: 40px;
+    color: rgb(49, 54, 85);
+}
+.contato{
+    background-color: #f9faff;
+    border-radius: 0rem;
+    margin-bottom: 0rem;
+}
+.contato-titulo{
+    margin-bottom: 40px;
+    color: rgb(49, 54, 85);
+}
+.btn-env{
+    background-color:rgb(74, 82, 133);
+    color: white;
+}
+.blog{
+    background-color: #f9faff;
+    border-radius: 0rem;
+    margin-bottom: 0rem;
+}
+.blog-titulo{
+    margin-bottom: 40px;
+    color: rgb(49, 54, 85);
+}
+.blog-post-title{
+    color: rgb(49, 54, 85);
+}
+.blog-post-title a{
+    color: rgb(49, 54, 85);
+    text-decoration: none;
+}
+.blog-post-title a:hover{
+    color: rgba(49, 54, 85, 0.699);
+    text-decoration: none;
+}
+.blog-pagination{
+    margin-bottom: 3rem;
+    
+}
+.tit-ult-art{
+    color: rgb(49, 54, 85);
+    margin-bottom: 46px !important;
+}
+.card img{
+    height: 200px;
+}
+.title-post-home a{
+    color: rgb(49, 54, 85);
+    text-decoration: none;
+}
+.title-post-home a:hover{
+    color: rgba(49, 54, 85, 0.699);
+    text-decoration: none;
+}
+.error-message{
+    color: #FF0000;
+}

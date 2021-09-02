@@ -27,6 +27,9 @@
                 <li class="nav-item menu">
                     <?= $this->Html->link(__('Contato'), ['controller'=>'Contato', 'action'=>'index'], ['class'=>'nav-link'])?>
                 </li>
+                <li class="nav-item menu">
+                    <?= $this->Html->link(__('Login'), ['prefix'=>'admin','controller'=>'Users', 'action'=>'login'], ['class'=>'nav-link'])?>
+                </li>
             </ul>
         </div>
     </nav>

@@ -1,12 +1,13 @@
 # Projeto Buzz
 
-O Buzz é o projeto de um blog que eu criei utilizanddo como base o curso de CakePHP 3 da Celke.
+[![GitHub](https://img.shields.io/github/license/Jonathanmoreiraa/ProjetoBuzz)](https://github.com/Jonathanmoreiraa/ProjetoBuzz/blob/main/LICENSE)
+ 
 
 ## 📑 Sobre o projeto
 
 O Buzz foi construído principalmente para meu aprendizado, mas, pode ser implementado de diversas formas.
 
-Entre suas proncipais funcionalidades, conta-se com:
+Entre suas principais funcionalidades, conta-se com:
 
 * Site Administrativo
 * Blog
@@ -38,48 +39,53 @@ A partir de agora, vou mostrar os passos para instalar no Windows:
 6. Por fim, clicar em finalizar.
 7. Depois, para verificar se instalou basta ir no cmd e digitar ``` composer --version ``` ou somente ``` composer ```.
 
-### 🔧 Instalação
+### 💻 Instalação
 
 Se o composer estiver instalado e funcionando, basta seguir os seguintes passos para instalar o projeto.
 
-1. 
+1. Ir no cmd ou git bash
+2. ```git init```
+3. ```git clone https://github.com/Jonathanmoreiraa/ProjetoBuzz.git```
+4. Acessar o CMD da pasta do repositório
+5. ```composer update```
+
+A instalação do projeto foi feita, agora, é preciso habilitar as seguintes extensões no php.ini para que o projeto funcione normalmente:
+
+* intl
+* gd2
+* mbstring
+
+#### Instalação do banco de dados
+
+Primeiramente, acessar o script ```aulanova.sql``` e copiar os dados.
+
+Ir no phpmyadmin e importar os dados, isso pode ser feito tanto pelo próprio arquivo, quanto por script, para isso basta abrir esse arquivo, copiar seu conteúdo e colar na seção SQL (phpmyadmin).
+
+#### Configuração do projeto
+
+Feito isso, é preciso renomear o arquivo ```app.default.php``` para ```app.php```.
+
+Por fim, é só preciso mudar as informações do banco para que acesse os dados, onde:
+
+* Acessar o arquivo ```app.php```
+* 'username'=>'nome-banco'
+* 'password'=>'senha' ou 'password'=>'' (caso o banco não tenha senha).
+* 'database'=>'aulanova'
 
 ## 🛠️ Construído com
 
-Mencione as ferramentas que você usou para criar seu projeto
+A ferramentas usadas para construir esse projeto foram:
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
-
-## 🖇️ Colaborando
-
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
-
-## 📌 Versão
-
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
-
-## ✒️ Autores
-
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
-
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
+* PHP 7
+* [CAKEPHP 3](https://book.cakephp.org/3/en/index.html) - Framework usado
+* HTML5, CSS3 e JavaScript
+* [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+* [Font Awesome 5](https://fontawesome.com/v5.15/icons?d=gallery&p=2) - Usado para adicionar os ícones ao site
 
 ## 📄 Licença
 
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
+A licença desse projeto é MIT, para mais detalhes acesse: [LICENSE.md](https://github.com/Jonathanmoreiraa/ProjetoBuzz/blob/main/LICENSE).
 
-## 🎁 Expressões de gratidão
+## 👤 Contato
 
-* Conte a outras pessoas sobre este projeto 📢
-* Convide alguém da equipe para uma cerveja 🍺 
-* Obrigado publicamente 🤓.
-* etc.
-
-
----
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
+* LinkedIn: [Jonathan Moreira](https://linkedin.com/in/jonathanmoreira1)

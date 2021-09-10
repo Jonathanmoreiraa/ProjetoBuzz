@@ -11,7 +11,7 @@ use PhpParser\Node\Stmt\Label;
     </div>
 </div><hr>
 <?= $this->Flash->render() ?>
-<?= $this->Form->create($empresasSob, ['enctype'=>'multipart/form-data']) //cria o formulário?>
+<?= $this->Form->create($empresasSob) //cria o formulário?>
 <div class="form-row">
     <div class="form-group col-md-6">
     <label><span class="text-danger">* </span>Título</label>
@@ -24,17 +24,6 @@ use PhpParser\Node\Stmt\Label;
     <div class="form-group col-md-12">
         <label>Descrição</label>
         <?= $this->Form->control('description', ['class'=>'form-control', 'label' => false]);?>
-    </div>
-    <div class="form-group col-md-6">
-        <label><span class="text-danger">* </span>Foto (750x400)</label><br>
-        <?= $this->Form->control('image', ['type'=>'file', 'label' => false, 'onchange'=>'previewImagem()']);?>
-    </div>
-    <div class="form-group col-md-6">
-        <?php 
-        //usa-se o user, pois foi o usado no UsersController para recuperar o $user_id
-            $image_antiga='..\..\files\empresassob\preview.png';//mostrar a imagem pré-definida
-        ?>
-        <img src='<?= $image_antiga ?>' alt='Preview da imagem' id="preview-img" class='img-thumbnail' style="width: 280px; height: 180px;">
     </div>
 </div>
 <p>

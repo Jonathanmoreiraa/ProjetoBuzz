@@ -14,7 +14,7 @@ use PhpParser\Node\Stmt\Label;
         <h2 class="display-4 titulo">Cadastrar Usuários</h2>
     </div>
     <div class="p-2">
-        <?= $this->Html->link(__('Listar'), ['controller' => 'users', 'action'=>'index'],  ['class'=>'btn btn-outline-secondary btn-sm'] )?>
+        <?= $this->Html->link(__('Listar'), ['controller' => 'contactMessages', 'action'=>'index'],  ['class'=>'btn btn-outline-secondary btn-sm'] )?>
     </div>
 </div><hr>
 <?= $this->Flash->render() ?>

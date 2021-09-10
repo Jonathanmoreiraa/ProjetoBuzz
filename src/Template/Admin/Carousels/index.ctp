@@ -83,6 +83,16 @@
                             Ações
                         </button>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                            <?= $this->Html->link(__('<i class="fas fa-angle-double-up"></i>'), 
+                            [
+                                'controller' => 'Carousels', 
+                                'action' => 'altOrdemCarousel', 
+                                $carousel->id
+                            ], 
+                            [
+                                'class'=>'text-center dropdown-item', 
+                                'escape'=>false
+                            ]) ?>
                             <?= $this->Html->link(__('Visualizar'), ['controller' => 'Carousels', 'action' => 'view', $carousel->id], ['class'=>'dropdown-item']) ?>
                             <?= $this->Html->link(__('Edit'), ['controller'=>'Carousels', 'action' => 'edit', $carousel->id], ['class'=>'dropdown-item']) ?>
                             <?php 

@@ -96,7 +96,7 @@ class CarouselsController extends AppController
                     $id = $resultSave->id; // último id inserido
                     $destino = WWW_ROOT. "files" . DS . "carousel" . DS . $id . DS;                
                     $this->Carousels->criarDiretorioImgRed($destino);
-                    $this->Flash->success(__('Usuário cadastrado com sucesso'));
+                    $this->Flash->success(__('Carousel cadastrado com sucesso'));
                     return $this->redirect(['controller' => 'Carousels', 'action' => 'addImageCarousel', $id]);
                 }else{
                     $this->Flash->error(__('Erro: Slide do carousel não foi cadastrado com sucesso'));

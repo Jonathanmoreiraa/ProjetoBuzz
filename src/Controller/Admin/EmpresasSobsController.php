@@ -84,31 +84,27 @@ class EmpresasSobsController extends AppController
     {
         $empresasSob = $this->EmpresasSobs->newEntity();
         if ($this->request->is('post')) {
+            
             $empresasSob = $this->EmpresasSobs->patchEntity($empresasSob, $this->request->getData());
-            if(!$empresasSob->errors()){//verifica se tem erro
-                $empresasSob->image = $this->EmpresasSobs->slugUploadImgRed($this->request->getData()['image']['name']);//tira os caracteres especiais
+            if(!$empresasSob->errors()){
 
                 $empresasSobTable = TableRegistry::get('EmpresasSobs');
                 $ultimoSlide = $empresasSobTable->getUltimoEmpresasSobs();//recupera o último sobre empres da ordem
-                $empresasSob->ordem = $ultimoSlide->ordem + 1;//pega o último slide da ordem e acrescenta +1 no novo
+                $empresasSob->ordem = $ultimoSlide->ordem + 1;
 
                 if ($resultSave = $this->EmpresasSobs->save($empresasSob)){
-                    $id = $resultSave->id; // ultimo id inserido
-                    
-                    $destino = WWW_ROOT. "files" . DS . "empresassob" . DS . $id . DS;                
-                    $imgUpload = $this->request->getData()['image'];
-                    $imgUpload['name'] = $empresasSob->image;
-                    
-                    if($this->EmpresasSobs->uploadImgRed($imgUpload, $destino, 750, 400)){
-                        $this->Flash->success(__('Sobre Empresa cadastrado com sucesso'));
-                        return $this->redirect(['controller' => 'EmpresasSobs', 'action' => 'view', $id]);
-                    }else{
-                        $this->Flash->danger(__('Erro ao realizar o upload!'));
-                    }
-                }
+                    $id = $resultSave->id; // último id inserido
+                    $destino = WWW_ROOT. "files" . DS . "Empresassob" . DS . $id . DS;                
+                    $this->EmpresasSobs->criarDiretorioImgRed($destino);
+                    $this->Flash->success(__('Sobre Empresa cadastrado com sucesso'));
+                    return $this->redirect(['controller' => 'EmpresasSobs', 'action' => 'alterarFotoSobempre', $id]);
+                }else{
+                    $this->Flash->error(__('Erro: Slide do EmpresasSob não foi cadastrado com sucesso'));
+                }    
             }else{
-                    $this->Flash->error(__('Erro ao salvar, tente outra vez!'));
-            }
+                $this->Flash->error(__('Erro: Slide do EmpresasSob não foi cadastrado com sucesso'));
+            } 
+    
         }
         $situations = $this->EmpresasSobs->Situations->find('list', ['limit' => 200]);
         $this->set(compact('empresasSob', 'situations'));
@@ -140,21 +136,21 @@ class EmpresasSobsController extends AppController
     }
     public function alterarFotoSobempre($id=null)
     {   //recuperar os dados do usuário logado
-        $empresasSob = $this->EmpresasSobs->get($id); //bucando informações no BD
+        $empresasSob = $this->EmpresasSobs->get($id);
         $imageAntiga = $empresasSob->image;
         if ($this->request->is(['patch','post', 'put'])) {
             $empresasSob = $this->EmpresasSobs->newEntity();
-            $empresasSob = $this->EmpresasSobs->patchEntity($empresasSob, $this->request->getData());
             if(!$empresasSob->errors()){//verifica se tem erro
                 $empresasSob->image = $this->EmpresasSobs->slugUploadImgRed($this->request->getData()['image']['name']);//tira os caracteres especiais
                 $empresasSob->id = $id;
                 if ($this->EmpresasSobs->save($empresasSob)){                    
                     $destino = WWW_ROOT. "files" . DS . "empresassob" . DS . $id . DS;                
                     $imgUpload = $this->request->getData()['image'];
-                    $imgUpload['name'] = $empresasSob->image;
 
                     if($this->EmpresasSobs->uploadImgRed($imgUpload, $destino, 750, 400)){
-                        $this->EmpresasSobs->deletefile($destino, $imageAntiga, $empresasSob->image);//usa o método deletefile para excluir a imagem antiga.
+                        if(($imageAntiga !== "") AND ($imageAntiga !== $empresasSob->image)){
+                            unlink($destino.$imageAntiga); //o unlink vai excluir a última img,para isso basta mostrar o diretorio
+                        }
                         $this->Flash->success(__('Imagem editada com sucesso'));
                         return $this->redirect(['controller' => 'EmpresasSobs', 'action' => 'view', $id]);
                     }else{
@@ -163,12 +159,11 @@ class EmpresasSobsController extends AppController
                         $this->Flash->danger(__('Erro: Imagem não foi cadastrada com sucesso. Erro ao realizar o upload'));
                     }
                 }else{
-                    $this->Flash->error(__('Erro: Item do Sobre Empresa não foi cadastrado com sucesso'));
+                    $this->Flash->error(__('Erro: Slide do EmpresasSobs não foi cadastrado com sucesso'));
                 }    
             }else{
-                $this->Flash->error(__('Erro: Item do Sobre Empresanão foi cadastrado com sucesso'));
+                $this->Flash->error(__('Erro: Slide do EmpresasSobs não foi cadastrado com sucesso'));
             } 
-    
         }
         $this->set(compact('empresasSob'));
     }

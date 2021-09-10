@@ -5,14 +5,14 @@
           <?php
             $cont = 1;
             foreach ($empSobs as $empSob){
-              if($cont == 1){
+              if($cont % 2 != 0){
                 $text = 'order-md-2';
                 $imagem = 'order-md-1';
                 $cont = 2;
               }else{
                 $text = '';
                 $imagem = '';
-                $cont = 2;
+                $cont = 1;
               }
           ?>
             <div class="row featurette">

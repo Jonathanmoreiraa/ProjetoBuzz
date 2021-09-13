@@ -11,14 +11,17 @@ Entre suas principais funcionalidades, conta-se com:
 
 * Site Administrativo
 * Blog
-* Adição de artigos
-* Adição de depoimentos
+* Controle de artigos
+* Controle de depoimentos
+* Controle de serviços
+* Controle de carousel
+* Controle de usuários
 
-Essas são algumas das funções, elas são explicadas da melhor forma no vídeo do projeto, onde apresento um vídeo mostrando como funciona.
+Essas são algumas das funções, elas são explicadas da melhor forma no vídeo do projeto.
 
 ### 📋 Antes de tudo
 
-Primeira coisa, não se esqueça de baixar um dos programas para o PHP, como o XAMPP (eu pessoalmente utilizo esse) ou WAMP.
+Primeira coisa, não se esqueça de baixar um dos programas para o PHP, como o XAMPP (eu pessoalmente utilizo o XAMPP) ou WAMP.
 
 Antes de começar a trabalhar com o Buzz, também é preciso verificar se o composer está baixado e instalado em sua máquina, caso não esteja, vou ensinar a baixar o composer.
 
@@ -71,6 +74,14 @@ Por fim, é só preciso mudar as informações do banco para que acesse os dados
 * 'username'=>'nome-banco'
 * 'password'=>'senha' ou 'password'=>'' (caso o banco não tenha senha).
 * 'database'=>'aulanova'
+
+## 🎨 Layout
+
+Ao clicar na imagem abaixo, você será redirecionado ao vídeo do youtube mostrando todas as funções da aplicação. Ou, se preferir, [CLIQUE AQUI!](https://www.youtube.com/watch?v=H3M8_4rv8IU).
+
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=H3M8_4rv8IU"><img src="https://user-images.githubusercontent.com/61876910/133122105-ec6cf218-edf5-4add-a6bb-60a80963d020.PNG" height="40%"></a>
+</div>
 
 ## 🛠️ Construído com
 

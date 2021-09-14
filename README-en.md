@@ -1,51 +1,102 @@
-# CakePHP Application Skeleton
+# Buzz Project
 
-[![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
+[![GitHub](https://img.shields.io/github/license/Jonathanmoreiraa/ProjetoBuzz)](https://github.com/Jonathanmoreiraa/ProjetoBuzz/blob/main/LICENSE)
+ 
 
-A skeleton for creating applications with [CakePHP](https://cakephp.org) 3.x.
+## 📑 About the project
 
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
+Buzz was created primarily for my learning, but it can be implemented in different ways.
 
-## Installation
+Among its main features, it has:
 
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
+* Administrative website
+* Blog
+* Articles control
+* Depositions control
+* Services control
+* Carousel control
+* Users control
 
-If Composer is installed globally, run
+These are some of its functions, they are explained of a better way in the project video.
 
-```bash
-composer create-project --prefer-dist cakephp/app
-```
+### 📋 Before start
 
-In case you want to use a custom app dir name (e.g. `/myapp/`):
+First thing, do not forget to download one of the programs to PHP, like XAMPP or WAMP.
 
-```bash
-composer create-project --prefer-dist cakephp/app myapp
-```
+Before starting to work with the Buzz, also is required to check if the composer is downloaded and installed in your computer, if it is not, i wll teach how to do it.
 
-You can now either use your machine's webserver to view the default home page, or start
-up the built-in webserver with:
+Last thing before start, i will teach the way that worked to me, i can not guarantee 100% that will also work to you, but, exists some great videos teaching how to do this in youtube.
 
-```bash
-bin/cake server -p 8765
-```
+So, follow the steps:
 
-Then visit `http://localhost:8765` to see the welcome page.
+1. Download the composer for the [OFICIAL WEBSITE](https://getcomposer.org/download/).
+2. If your computer is Windows (my case), you can download the installer, otherwise, it's possible download by command line. 
 
-## Update
+Now, i will show how to install in the Windows:
 
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
+1. Execute the installer.
+2. You do not need to keep developer mode checked
+3. Usually, the program already finds where the PHP executable is downloaded, you just need to confirm and go forward.
+5. If you have any proxy, just write on the next screen, if you do not have one, just leave blank.
+7. Click on install.
+8. Por fim, clicar em finalizar.
+9. Depois, para verificar se instalou basta ir no cmd e digitar ``` composer --version ``` ou somente ``` composer ```.
 
-## Configuration
+### 💻 Instalação
 
-Read and edit `config/app.php` and setup the `'Datasources'` and any other
-configuration relevant for your application.
+Se o composer estiver instalado e funcionando, basta seguir os seguintes passos para instalar o projeto.
 
-## Layout
+1. Ir no cmd ou git bash
+2. ```git init```
+3. ```git clone https://github.com/Jonathanmoreiraa/ProjetoBuzz.git```
+4. Acessar o CMD da pasta do repositório
+5. ```composer update```
 
-The app skeleton uses a subset of [Foundation](http://foundation.zurb.com/) (v5) CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
+A instalação do projeto foi feita, agora, é preciso habilitar as seguintes extensões no php.ini para que o projeto funcione normalmente:
+
+* intl
+* gd2
+* mbstring
+
+#### Instalação do banco de dados
+
+Primeiramente, acessar o script ```aulanova.sql``` e copiar os dados.
+
+Ir no phpmyadmin e importar os dados, isso pode ser feito tanto pelo próprio arquivo, quanto por script, para isso basta abrir esse arquivo, copiar seu conteúdo e colar na seção SQL (phpmyadmin).
+
+#### Configuração do projeto
+
+Feito isso, é preciso renomear o arquivo ```app.default.php``` para ```app.php```.
+
+Por fim, é só preciso mudar as informações do banco para que acesse os dados, onde:
+
+* Acessar o arquivo ```app.php```
+* 'username'=>'nome-banco'
+* 'password'=>'senha' ou 'password'=>'' (caso o banco não tenha senha).
+* 'database'=>'aulanova'
+
+## 🎨 Layout
+
+Ao clicar na imagem abaixo, você será redirecionado ao vídeo do youtube mostrando todas as funções da aplicação. Ou, se preferir, [CLIQUE AQUI!](https://www.youtube.com/watch?v=H3M8_4rv8IU).
+
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=H3M8_4rv8IU"><img src="https://user-images.githubusercontent.com/61876910/133122105-ec6cf218-edf5-4add-a6bb-60a80963d020.PNG" height="40%"></a>
+</div>
+
+## 🛠️ Construído com
+
+A ferramentas usadas para construir esse projeto foram:
+
+* PHP 7
+* [CAKEPHP 3](https://book.cakephp.org/3/en/index.html) - Framework usado
+* HTML5, CSS3 e JavaScript
+* [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+* [Font Awesome 5](https://fontawesome.com/v5.15/icons?d=gallery&p=2) - Usado para adicionar os ícones ao site
+
+## 📄 Licença
+
+A licença desse projeto é MIT, para mais detalhes acesse: [LICENSE.md](https://github.com/Jonathanmoreiraa/ProjetoBuzz/blob/main/LICENSE).
+
+## 👤 Contato
+
+* LinkedIn: [Jonathan Moreira](https://linkedin.com/in/jonathanmoreira1)

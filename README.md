@@ -93,7 +93,7 @@ A ferramentas usadas para construir esse projeto foram:
 * [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 * [Font Awesome 5](https://fontawesome.com/v5.15/icons?d=gallery&p=2) - Usado para adicionar os ícones ao site
 
-## 📄 Licença
+## ⚖️ Licença
 
 A licença desse projeto é MIT, para mais detalhes acesse: [LICENSE.md](https://github.com/Jonathanmoreiraa/ProjetoBuzz/blob/main/LICENSE).
 
